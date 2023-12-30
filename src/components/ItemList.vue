@@ -23,8 +23,6 @@ onMounted(async () => {
       <ItemCard
         v-for="item in items"
         :key="item.id"
-        :title="item.title"
-        :price="item.price"
         :image="item.image"
       />
     </div>
@@ -40,7 +38,7 @@ onMounted(async () => {
     margin: 0 auto;
     margin-top: 20px;
     display: grid;
-    gap: 40px;
+    gap: 20px;
   }
 
   &_header {
@@ -62,12 +60,6 @@ onMounted(async () => {
 @media (min-width: 900px) {
   .itemList_grid {
     grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 1200px) {
-  .itemList_grid {
-    grid-template-columns: repeat(4, 1fr);
   }
 }
 </style>
